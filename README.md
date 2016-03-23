@@ -1,4 +1,5 @@
 symfony-cas
 ===========
 
-A Symfony project created on March 22, 2016, 9:08 am.
+This is a reference implementation of Symfony, Central Authentication Service (CAS), and Doctrine user entities.
+
