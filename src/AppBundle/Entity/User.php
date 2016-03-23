@@ -24,11 +24,6 @@ class User implements AdvancedUserInterface, \Serializable
     private $username;
 
     /**
-     * @ORM\Column(type="string", length=64)
-     */
-    private $password;
-
-    /**
      * @ORM\Column(name="is_active", type="boolean")
      */
     private $isActive;
@@ -59,12 +54,12 @@ class User implements AdvancedUserInterface, \Serializable
 
     public function getPassword()
     {
-        return $this->password;
+        return '';
     }
 
     public function getRoles()
     {
-        return array('ROLE_USER');
+        return $this->roles;
     }
 
     public function eraseCredentials()
@@ -97,7 +92,6 @@ class User implements AdvancedUserInterface, \Serializable
         return serialize(array(
           $this->id,
           $this->username,
-          $this->password,
           $this->isActive,
             // see section on salt below
             // $this->salt,
@@ -110,7 +104,6 @@ class User implements AdvancedUserInterface, \Serializable
         list (
           $this->id,
           $this->username,
-          $this->password,
           $this->isActive,
           // see section on salt below
           // $this->salt
@@ -148,8 +141,6 @@ class User implements AdvancedUserInterface, \Serializable
      */
     public function setPassword($password)
     {
-        $this->password = $password;
-
         return $this;
     }
 
