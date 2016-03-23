@@ -10,6 +10,7 @@ use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Security\Core\Util\SecureRandom;
 
 /**
  * Overrides the default EntityUserProvider to work with BeSimpleSsoAuthBundle.
@@ -99,7 +100,7 @@ class EntityUserProvider implements UserProviderInterface, UserFactoryInterface
         $user = new User();
         $user->setUsername($username);
         $user->setRoles($roles);
-        $user->setPassword('cas');
+        $user->setPassword(bin2hex(random_bytes(20)));
         $this->getObjectManager()->persist($user);
         $this->getObjectManager()->flush();
 
