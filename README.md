@@ -24,7 +24,6 @@ The following are the changes from a default Symfony 2.8 install:
 ## app/AppKernel.php
 
 ```
-#!php
 $bundles = array(
    // ...
    new BeSimple\SsoAuthBundle\BeSimpleSsoAuthBundle(),
