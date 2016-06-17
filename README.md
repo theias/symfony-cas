@@ -35,16 +35,32 @@ $bundles = array(
 
 Replace with your CAS server name:
 
-```be_simple_sso_auth:    cas_sso:        protocol:            id: cas            version: 2        server:            id: cas            login_url: https://cas.ias.edu/cas/login            logout_url: https://cas.ias.edu/cas/logout            validation_url: https://cas.ias.edu/cas/serviceValidate
-```
+```
+be_simple_sso_auth:
+    cas_sso:
+        protocol:
+            id: cas
+            version: 2
+        server:
+            id: cas
+            login_url: "%cas_login_url%"
+            logout_url: "%cas_logout_url%"
+            validation_url: "%cas_validation_url%"
+
+```
     
 ## app/config/routing.yml
 
 ```
-logout:    pattern: /logout
-```
-## app/config/security.yml
-This configuration protects all pages except the home page.
+logout:
+    path: /logout
+
+```
+
+
+## app/config/security.yml
+
+This configuration protects all pages except the home page.
 
     encoders:
         AppBundle\Entity\User:
@@ -87,7 +103,16 @@ logout:    pattern: /logout
 
 ## app/config/services.yml
 
-    parameters:        doctrine.orm.security.user.provider.class: AppBundle\Security\User\EntityUserProvider
+    parameters:
+        doctrine.orm.security.user.provider.class: AppBundle\Security\User\EntityUserProvider
+        
+## app/config/parameters.yml
+
+    parameters:
+        # ...
+        cas_login_url: https://sso.example.com/cas/login
+        cas_logout_url: https://sso.example.com/cas/logout
+        cas_validation_url: https://sso.example.com/cas/serviceValidate
 
 ## Important classes and templates
 

@@ -17,3 +17,7 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+    cas_login_url: https://sso.example.com/cas/login
+    cas_logout_url: https://sso.example.com/cas/logout
+    cas_validation_url: https://sso.example.com/cas/serviceValidate
