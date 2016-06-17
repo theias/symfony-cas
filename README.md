@@ -32,8 +32,6 @@ $bundles = array(
     
 ## app/config/config.yml
 
-Replace with your CAS server name:
-
 ```
 be_simple_sso_auth:
     cas_sso:
@@ -106,6 +104,8 @@ This configuration protects all pages except the home page.
         doctrine.orm.security.user.provider.class: AppBundle\Security\User\EntityUserProvider
         
 ## app/config/parameters.yml
+
+Use your CAS server URL here.
 
     parameters:
         # ...
