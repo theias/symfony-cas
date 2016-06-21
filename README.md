@@ -102,6 +102,7 @@ This configuration protects all pages except the home page.
 
     parameters:
         doctrine.orm.security.user.provider.class: AppBundle\Security\User\EntityUserProvider
+        be_simple.sso_auth.client.option.curlopt_sslversion.value: 0
         
 ## app/config/parameters.yml
 
