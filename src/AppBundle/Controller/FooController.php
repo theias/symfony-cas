@@ -12,7 +12,7 @@ class FooController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('@App/Foo/index.html.twig', array(
+        return $this->render(':foo:index.html.twig', array(
             // ...
         ));
     }

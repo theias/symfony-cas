@@ -12,7 +12,7 @@ class SecurityController extends Controller
      */
     public function errorAction()
     {
-        return $this->render('AppBundle:Security:error.html.twig', array(
+        return $this->render(':security:error.html.twig', array(
             // ...
         ));
     }
