@@ -23,6 +23,7 @@ class UserType extends AbstractType
                 'multiple' => true,
                 'choices' => array('User' => 'ROLE_USER', 'Admin' => 'ROLE_ADMIN'),
                 'choices_as_values' => true,
+                'empty_data' => array('ROLE_USER'),
             ])
         ;
     }
