@@ -1,6 +1,8 @@
 symfony-cas
 ===========
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/dca3869f-4c0a-4777-b49d-05b012b889cc/small.png)](https://insight.sensiolabs.com/projects/dca3869f-4c0a-4777-b49d-05b012b889cc)
+
 This is a reference implementation of:
 
   * [Symfony](https://symfony.com/)
