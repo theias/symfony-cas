@@ -4,11 +4,13 @@ namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 
 class SecurityController extends Controller
 {
     /**
      * @Route("/login/error")
+     * @Method("GET")
      */
     public function errorAction()
     {
@@ -19,6 +21,7 @@ class SecurityController extends Controller
 
     /**
      * @Route("/login/check")
+     * @Method("GET")
      */
     public function checkAction()
     {
