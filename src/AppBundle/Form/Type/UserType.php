@@ -17,7 +17,7 @@ class UserType extends AbstractType
     {
         $builder
             ->add('username')
-            ->add('isActive')
+            ->add('active')
             ->add('roles', ChoiceType::class, [
                 'expanded' => true,
                 'multiple' => true,

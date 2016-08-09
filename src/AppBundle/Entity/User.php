@@ -26,7 +26,7 @@ class User implements AdvancedUserInterface, \Serializable
     /**
      * @ORM\Column(name="is_active", type="boolean")
      */
-    private $isActive;
+    private $active;
 
     /**
      * @ORM\Column(type="simple_array")
@@ -35,7 +35,7 @@ class User implements AdvancedUserInterface, \Serializable
 
     public function __construct()
     {
-        $this->isActive = true;
+        $this->active = true;
         $this->roles = ['ROLE_USER'];
     }
 
@@ -82,7 +82,7 @@ class User implements AdvancedUserInterface, \Serializable
 
     public function isEnabled()
     {
-        return $this->isActive;
+        return $this->active;
     }
 
     /** @see \Serializable::serialize() */
@@ -91,7 +91,7 @@ class User implements AdvancedUserInterface, \Serializable
         return serialize(array(
           $this->id,
           $this->username,
-          $this->isActive,
+          $this->active,
             // see section on salt below
             // $this->salt,
         ));
@@ -103,7 +103,7 @@ class User implements AdvancedUserInterface, \Serializable
         list (
           $this->id,
           $this->username,
-          $this->isActive,
+          $this->active,
           // see section on salt below
           // $this->salt
           ) = unserialize($serialized);
@@ -144,14 +144,14 @@ class User implements AdvancedUserInterface, \Serializable
     }
 
     /**
-     * Set isActive
+     * Set active
      *
-     * @param boolean $isActive
+     * @param boolean $active
      * @return User
      */
-    public function setIsActive($isActive)
+    public function setActive($active)
     {
-        $this->isActive = $isActive;
+        $this->active = $active;
 
         return $this;
     }
@@ -161,9 +161,9 @@ class User implements AdvancedUserInterface, \Serializable
      *
      * @return boolean
      */
-    public function getIsActive()
+    public function isActive()
     {
-        return $this->isActive;
+        return $this->active;
     }
 
     /**
