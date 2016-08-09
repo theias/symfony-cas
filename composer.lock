@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9c77e8f1d0138d2917004ff86e040834",
-    "content-hash": "48c1d7caffeb51cf0e4b26868e478230",
+    "hash": "c2813ea674f84d9f01e4e6e379e72b4f",
+    "content-hash": "ac1b5f501ac9f8ec2765a16327557f34",
     "packages": [
         {
             "name": "besimple/sso-auth-bundle",
