@@ -1,6 +1,7 @@
 {
     "name": "cjm/symfony.cas",
-    "license": "proprietary",
+    "license": "MIT",
+    "description": "A reference implementation of Symfony, Central Authentication Service (CAS), BeSimpleSsoAuthBundle, and database users with the Entity provider.",
     "type": "project",
     "autoload": {
         "psr-4": {
